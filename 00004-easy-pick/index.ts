@@ -1,6 +1,6 @@
 /**
  * 課題: 組み込みの Pick<T, K> を使わずに、自分で実装してください。
- *
+ * https://github.com/type-challenges/type-challenges/blob/main/questions/00004-easy-pick/README.md
  * Pick は、型 T から プロパティ K のセットを選んで新しい型を構築します。
  *
  * 例:

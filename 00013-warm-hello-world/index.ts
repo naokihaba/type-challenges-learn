@@ -1,6 +1,6 @@
 /**
  * Hello, World!
- *
+ * https://github.com/type-challenges/type-challenges/tree/main/questions/00013-warm-hello-world
  * Type Challengesでは、型システム自体を使ってアサーション（検証）を行います。
  *
  * このチャレンジでは、以下のコードを変更してテストが通る（型チェックエラーがない）ようにしてください。
