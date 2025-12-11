@@ -17,6 +17,9 @@
 
 // TODO(human): MyExclude を実装してください
 
+// T = 'a' | 'b' | 'c'
+// U = 'a'
+// 除外したい場合は never
 type MyExclude<T,U> = T extends U ? never : T
 
 type Result = MyExclude<'a' | 'b' | 'c', 'a'> // 'b' | 'c'
