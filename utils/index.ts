@@ -1,5 +1,5 @@
 // T が True であることを期待する
-export type Expect<T extends true> = T
+export type Expect<T extends true> = T;
 
 /**
  * <Equal<A, B>>
@@ -12,5 +12,4 @@ export type Expect<T extends true> = T
  * "YES" | "NO"
  */
 export type Equal<X, Y> =
-  (<T>() => T extends X ? 1 : 2) extends
-  (<T>() => T extends Y ? 1 : 2) ? true : false
+  (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2 ? true : false;

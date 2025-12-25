@@ -18,23 +18,22 @@
  * - K は T のキーの部分集合である必要があります
  */
 
-
 // T：Todo
 // K extends keyof T： KはTの部分集合であること（制約）
 type MyPick<T, K extends keyof T> = {
   // [key in K]：K の各キー（title・completed）にプロパティを生成
-  [key in K]: T[key]
-}
+  [key in K]: T[key];
+};
 
 interface Todo {
-  title: string
-  description: string
-  completed: boolean
+  title: string;
+  description: string;
+  completed: boolean;
 }
 
-type TodoPreview = MyPick<Todo, 'title' | 'completed'>
+type TodoPreview = MyPick<Todo, "title" | "completed">;
 
 const todo: TodoPreview = {
-  title: 'Clean room',
+  title: "Clean room",
   completed: false,
-}
+};

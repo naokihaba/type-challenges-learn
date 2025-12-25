@@ -1,4 +1,4 @@
-import type { Equal, Expect } from '../utils'
+import type { Equal, Expect } from "../utils";
 
 /**
  * 00018-easy-length-of-tuple
@@ -18,10 +18,10 @@ import type { Equal, Expect } from '../utils'
  * - readonly なタプルも扱えるようにする必要があります
  */
 
-type tesla = ['tesla', 'model 3', 'model X', 'model Y']
-type spaceX = ['FALCON 9', 'FALCON HEAVY', 'DRAGON', 'STARSHIP', 'HUMAN SPACEFLIGHT']
+type tesla = ["tesla", "model 3", "model X", "model Y"];
+type spaceX = ["FALCON 9", "FALCON HEAVY", "DRAGON", "STARSHIP", "HUMAN SPACEFLIGHT"];
 
-type Length<T extends readonly unknown[]> = T['length']
+type Length<T extends readonly unknown[]> = T["length"];
 
-type teslaLength = Length<tesla>  // expected 4
-type spaceXLength = Length<spaceX> // expected 5
+type teslaLength = Length<tesla>; // expected 4
+type spaceXLength = Length<spaceX>; // expected 5

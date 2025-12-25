@@ -13,9 +13,9 @@
  * type test = Expect<Equal<HelloWorld, string>>
  * ```
  */
-import { Equal, Expect } from "../utils"
+import { Equal, Expect } from "../utils";
 
 // 解答をここに記述してください
-type HelloWorld = string
+type HelloWorld = string;
 
-type test = Expect<Equal<HelloWorld, string>>
+type test = Expect<Equal<HelloWorld, string>>;

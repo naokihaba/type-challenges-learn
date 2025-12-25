@@ -15,13 +15,12 @@
  * - C extends true ? ... : ... の形を考えてみましょう
  */
 
-
 /**
  * C = Condition（条件）
  * T = True（真の場合に返す型）
  * F = False（偽の場合に返す型）
  */
-type If<C,T,F> = C extends true ? T : F
+type If<C, T, F> = C extends true ? T : F;
 
-type A = If<true, 'a', 'b'>  // expected to be 'a'
-type B = If<false, 'a', 'b'> // expected to be 'b'
+type A = If<true, "a", "b">; // expected to be 'a'
+type B = If<false, "a", "b">; // expected to be 'b'

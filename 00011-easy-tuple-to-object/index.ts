@@ -18,19 +18,18 @@
  * - オブジェクトのキーとして使える型は `PropertyKey`（string | number | symbol）です
  */
 
-
 // const tuple: readonly ["tesla", "model 3", "model X", "model Y"]
-const tuple = ['tesla', 'model 3', 'model X', 'model Y'] as const
+const tuple = ["tesla", "model 3", "model X", "model Y"] as const;
 
 // type Elements = "tesla" | "model 3" | "model X" | "model Y"
 // indexed access types
 // https://typescriptbook.jp/reference/type-reuse/indexed-access-types
-type Elements = (typeof tuple)[number]
+type Elements = (typeof tuple)[number];
 
 type TupleToObject<T extends readonly PropertyKey[]> = {
   // tuple index access T[number] -> "tesla", "model 3", "model X", "model Y"
-  [k in T[number]]: k
-}
+  [k in T[number]]: k;
+};
 
-type result = TupleToObject<typeof tuple> // expected { 'tesla': 'tesla', 'model 3': 'model 3', 'model X': 'model X', 'model Y': 'model Y'}
+type result = TupleToObject<typeof tuple>; // expected { 'tesla': 'tesla', 'model 3': 'model 3', 'model X': 'model X', 'model Y': 'model Y'}
 // 期待する結果: { 'tesla': 'tesla', 'model 3': 'model 3', 'model X': 'model X', 'model Y': 'model Y' }

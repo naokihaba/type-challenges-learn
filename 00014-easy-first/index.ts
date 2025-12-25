@@ -1,4 +1,4 @@
-import type { Equal, Expect } from '../utils'
+import type { Equal, Expect } from "../utils";
 
 /**
  * 課題: 配列 T を受け取り、その最初の要素の型を返すジェネリック型 First<T> を実装してください。
@@ -17,8 +17,8 @@ import type { Equal, Expect } from '../utils'
  * - 配列のインデックスアクセス T[0] や infer キーワードについて調べてみてください
  */
 
-type arr1 = ['a', 'b', 'c']
-type arr2 = [3, 2, 1]
+type arr1 = ["a", "b", "c"];
+type arr2 = [3, 2, 1];
 
 /**
  * T = ['a', 'b', 'c']
@@ -28,9 +28,9 @@ type arr2 = [3, 2, 1]
  * 最初の要素が T extends [infer F,...unknown[]]にあれば、最初の要素を
  * なければ neverを返す
  * T = ['a', 'b', 'c'] = 'a'
- * 
+ *
  * T = [] = never
  */
 type First<T extends unknown[]> = T extends [infer F, ...unknown[]] ? F : never;
-type head1 = First<arr1> // expected to be 'a'
-type head2 = First<arr2> // expected to be 3
+type head1 = First<arr1>; // expected to be 'a'
+type head2 = First<arr2>; // expected to be 3

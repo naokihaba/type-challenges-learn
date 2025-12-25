@@ -18,23 +18,22 @@
  * - readonly 修飾子を使います
  */
 
-
 // https://typescriptbook.jp/reference/type-reuse/utility-types/readonly
 type MyReadonly<T> = {
-  readonly [P in keyof T]: T[P]
-}
+  readonly [P in keyof T]: T[P];
+};
 
 interface Todo {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
-type ReadonlyTodo = MyReadonly<Todo>
+type ReadonlyTodo = MyReadonly<Todo>;
 
 const todo: ReadonlyTodo = {
-  title: 'Clean room',
-  description: 'My room is messy',
-}
+  title: "Clean room",
+  description: "My room is messy",
+};
 
 // これはエラーになるはず（読み取り専用なので再代入できない）
 // todo.title = 'Hello'
