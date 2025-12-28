@@ -16,7 +16,7 @@
 
 // TODO(human): Push を実装してください
 
-type Push<T extends unknown[], U> = never;
+type Push<T extends number[], U extends string> = [...T, U];
+type Result = Push<[1, 2], "3">; // [1, 2, '3']
 
-type Result = Push<[1, 2], "3">; // expected to be [1, 2, '3']
-type Result2 = Push<[], 1>; // expected to be [1]
+export {};

@@ -1,6 +1,6 @@
-* 問題
-  * `HelloWorld` 型を修正してテストを通す（Type Challenges の入門課題）
-* 制約
-  * `Equal<HelloWorld, string>` が true になること
-* 例
-  * `type HelloWorld = any` → `type HelloWorld = string`
+- 問題
+  - `HelloWorld` 型を修正してテストを通す（Type Challenges の入門課題）
+- 制約
+  - `Equal<HelloWorld, string>` が true になること
+- 例
+  - `type HelloWorld = any` → `type HelloWorld = string`
