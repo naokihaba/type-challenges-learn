@@ -29,7 +29,6 @@ const tuple = ["tesla", "model 3", "model X", "model Y"] as const;
 // type Hoge = "tesla" | "model 3" | "model X" | "model Y"
 // type Hoge = ["tesla", "model 3", "model X", "model Y"][number]
 
-
 type TupleToObject<T extends readonly PropertyKey[]> = {
   // T[number] = "tesla" | "model 3" | "model X" | "model Y"
   [P in T[number]]: P;
